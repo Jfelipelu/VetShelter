@@ -14,7 +14,6 @@ const AnimalGrid = styled('div')(({ theme }) => ({
 }));
 
 const AnimalList = ({ animals }) => {
-  console.log(animals)
   return (
     <Container>
       <AnimalGrid>
