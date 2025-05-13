@@ -78,10 +78,10 @@ This is a demonstration project — there is no user authentication or access co
     ├── App.js
     ├── index.js
 
-##📦 Excel Export
+## 📦 Excel Export
 You can export all transactions via a button in the transaction form page. The generated Excel file will include all adoption/foster events registered so far.
 
-##⚠️ Notes
+## ⚠️ Notes
 This project is for demonstration purposes only.
 
 No user authentication or role-based access has been implemented.
