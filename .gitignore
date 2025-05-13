@@ -1,0 +1,25 @@
+# Maven / Gradle
+target/
+
+# Archivos compilados
+*.class
+
+# Logs
+*.log
+
+# IDEs
+.classpath
+.project
+.settings/
+.vscode/
+.idea/
+
+# Archivos de entorno
+.env
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Node.js (si tienes frontend con Node)
+node_modules/
