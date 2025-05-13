@@ -17,34 +17,34 @@ const AnimalCard = ({ animal }) => {
           <AnimalDetails><strong>Vacunas :</strong> {animal.vaccine ? 'Sí' : 'No'}</AnimalDetails>
           <AnimalDetails><strong>Con nosotros desde :</strong> {animal.admissionDate}</AnimalDetails>
           {
-          animal.venomous !== undefined
-            ? <AnimalDetails><strong>{animal.venomous ? 'Venenoso' : 'No Venenoso'}</strong></AnimalDetails>
-            : null
+            animal.venomous !== undefined
+              ? <AnimalDetails><strong>{animal.venomous ? 'Venenoso' : 'No Venenoso'}</strong></AnimalDetails>
+              : null
           }
           {
-          animal.habitat !== undefined
-            ? <AnimalDetails><strong>Habitat :</strong> {animal.habitat}</AnimalDetails>
-            : null
+            animal.habitat !== undefined
+              ? <AnimalDetails><strong>Habitat :</strong> {animal.habitat}</AnimalDetails>
+              : null
           }
           {
-          animal.furLength !== undefined
-            ? <AnimalDetails><strong>Tipo de pelaje :</strong> {animal.furLength}</AnimalDetails>
-            : null
+            animal.furLength !== undefined
+              ? <AnimalDetails><strong>Tipo de pelaje :</strong> {animal.furLength}</AnimalDetails>
+              : null
           }
           {
-          animal.trained !== undefined
-            ? <AnimalDetails><strong>{animal.trained ? 'Entrenado' : 'No entrenado'}</strong></AnimalDetails>
-            : null
+            animal.trained !== undefined
+              ? <AnimalDetails><strong>{animal.trained ? 'Entrenado' : 'No entrenado'}</strong></AnimalDetails>
+              : null
           }
           {
-          animal.canFly !== undefined
-            ? <AnimalDetails><strong>{animal.canFly ? 'Volador' : 'No volador'}</strong></AnimalDetails>
-            : null
+            animal.canFly !== undefined
+              ? <AnimalDetails><strong>{animal.canFly ? 'Volador' : 'No volador'}</strong></AnimalDetails>
+              : null
           }
           {
-          animal.aquatic !== undefined
-            ? <AnimalDetails><strong>{animal.aquatic ? 'Acuático' : 'No acuático'}</strong></AnimalDetails>
-            : null
+            animal.aquatic !== undefined
+              ? <AnimalDetails><strong>{animal.aquatic ? 'Acuático' : 'No acuático'}</strong></AnimalDetails>
+              : null
           }
         </div>
       </InfoContainer>

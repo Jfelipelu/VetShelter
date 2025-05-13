@@ -11,11 +11,7 @@ target/
 .classpath
 .project
 .settings/
-.vscode/
-.idea/
-
-# Archivos de entorno
-.env
+.vscode/}
 
 # Archivos del sistema
 .DS_Store
