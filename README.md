@@ -222,6 +222,18 @@ classDiagram
     Animal <|-- Anfibios
     Transaccion --> Animal : animal
 ```
+### Flowchart
+```mermaid
+  graph TD
+      A[Usuario en el Frontend] --> B[Formulario en React]
+      B --> C[Envio de datos HTTP]
+      C --> D[Controlador - @RestController]
+      D --> E[Servicio - @Service]
+      E --> F[Entidad - @Entity]
+      F --> G[Repositorio - @Repository]
+      G --> H[Base de Datos - PostgreSQL]
+
+```
 
 ## 📦 Excel Export
 You can export all transactions via a button in the transaction form page. The generated Excel file will include all adoption/foster events registered so far.
