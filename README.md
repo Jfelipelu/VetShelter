@@ -223,15 +223,27 @@ classDiagram
     Transaccion --> Animal : animal
 ```
 ### Flowchart
+* Request
 ```mermaid
   graph TD
-      A[Usuario en el Frontend] --> B[Formulario en React]
-      B --> C[Envio de datos HTTP]
-      C --> D[Controlador - @RestController]
-      D --> E[Servicio - @Service]
-      E --> F[Entidad - @Entity]
-      F --> G[Repositorio - @Repository]
-      G --> H[Base de Datos - PostgreSQL]
+    A[Usuario en el Frontend] --> B[Formulario en React]
+    B --> C[Envío de datos HTTP]
+    C --> D[Controlador - @RestController]
+    D --> E[Servicio - @Service]
+    E --> F[Entidad - @Entity]
+    F --> G[Repositorio - @Repository]
+    G --> H[Base de Datos - PostgreSQL]
+```
+*Response
+```mermaid
+  graph TD
+     A[Base de Datos - PostgreSQL] --> B[Repositorio - @Repository]
+      B --> C[Entidad - @Entity]
+      C --> D[Servicio - @Service]
+      D --> E[Controlador - @RestController]
+      E --> F[Respuesta HTTP]
+      F --> G[Frontend React]
+      G --> H[Actualización de la Interfaz o Estado]
 
 ```
 
