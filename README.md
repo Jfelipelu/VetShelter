@@ -69,6 +69,130 @@ This is a demonstration project — there is no user authentication or access co
     ├── service/
     │   └── AnimalService, TransaccionService, StatisticsService
 
+### Class Diagram
+```mermaid
+classDiagram
+    class Animal {
+        - Long id
+        - String name
+        - String species
+        - String breed
+        - int age
+        - String health
+        - boolean available
+        - boolean vaccine
+        - String admissionDate
+        - String transactionDate
+        + Animal()
+        + Animal(name, species, breed, age, health, available, vaccine, admissionDate, transactionDate)
+        + getId(): Long
+        + setId(id: Long)
+        + getName(): String
+        + setName(name: String)
+        + getSpecies(): String
+        + setSpecies(species: String)
+        + getBreed(): String
+        + setBreed(breed: String)
+        + getAge(): int
+        + setAge(age: int)
+        + getHealth(): String
+        + setHealth(health: String)
+        + isAvailable(): boolean
+        + setAvailable(available: boolean)
+        + isVaccine(): boolean
+        + setVaccine(vaccine: boolean)
+        + getAdmissionDate(): String
+        + setAdmissionDate(admissionDate: String)
+        + getTransactionDate(): String
+        + setTransactionDate(transactionDate: String)
+    }
+
+    class Canino {
+        - Boolean trained
+        + Canino()
+        + Canino(name, species, breed, age, health, available, vaccine, admissionDate, trained, transactionDate)
+        + isTrained(): Boolean
+        + setTrained(trained: Boolean)
+    }
+
+    class Felino {
+        - String furLength
+        + Felino()
+        + Felino(name, species, breed, age, health, available, vaccine, admissionDate, transactionDate, furLength)
+        + getFurLength(): String
+        + setFurLength(furLength: String)
+    }
+
+    class Ave {
+        - Boolean canFly
+        + Ave()
+        + Ave(name, species, breed, age, health, available, vaccine, admissionDate, transactionDate, canFly)
+        + isCanFly(): Boolean
+        + setCanFly(canFly: Boolean)
+    }
+
+    class Reptiles {
+        - boolean venomous
+        - String habitat
+        + Reptiles()
+        + Reptiles(name, species, breed, age, health, available, vaccine, admissionDate, transactionDate, venomous, habitat)
+        + isVenomous(): boolean
+        + setVenomous(venomous: boolean)
+        + getHabitat(): String
+        + setHabitat(habitat: String)
+    }
+
+    class Anfibios {
+        - Boolean aquatic
+        + Anfibios()
+        + Anfibios(name, species, breed, age, health, available, vaccine, admissionDate, transactionDate, aquatic)
+        + isAquatic(): Boolean
+        + setAquatic(aquatic: Boolean)
+    }
+
+    class Transaccion {
+        - Long id
+        - Animal animal
+        - String type
+        - String date
+        - String responsible
+        + Transaccion()
+        + Transaccion(animal, type, date, responsible)
+        + getId(): Long
+        + setId(id: Long)
+        + getAnimal(): Animal
+        + setAnimal(animal: Animal)
+        + getType(): String
+        + setType(type: String)
+        + getDate(): String
+        + setDate(date: String)
+        + getResponsible(): String
+        + setResponsible(responsible: String)
+    }
+
+    class MetricasDTO {
+        - long totalAnimales
+        - long totalAdopciones
+        - long totalAcogidas
+        - Map totalPorEspecie
+        + getTotalAnimales(): long
+        + setTotalAnimales(totalAnimales: long)
+        + getTotalAdopciones(): long
+        + setTotalAdopciones(totalAdopciones: long)
+        + getTotalAcogidas(): long
+        + setTotalAcogidas(totalAcogidas: long)
+        + getTotalPorEspecie(): Map
+        + setTotalPorEspecie(totalPorEspecie: Map)
+    }
+
+    Animal <|-- Canino
+    Animal <|-- Felino
+    Animal <|-- Ave
+    Animal <|-- Reptiles
+    Animal <|-- Anfibios
+    Transaccion --> Animal : animal
+```
+
 ### Frontend:
     src/
     ├── components/
