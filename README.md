@@ -4,6 +4,7 @@ This is a full-stack web application designed to support the management of anima
 This is a demonstration project — there is no user authentication or access control. It showcases basic CRUD operations, data filtering, and Excel export functionality for managing animals in a veterinary shelter.
 
 ## 💡 Features
+### Shelter Operations
 * Register animals of different types (dogs, cats, birds, etc.)
 
 * Register adoptions and temporary sheltering (fostering)
@@ -43,18 +44,38 @@ This is a demonstration project — there is no user authentication or access co
 
 * Material UI
 
+### Database
+*PostgreSQL v16
+
 ## 🚀 Running Locally
 ### * Backend
-      cd veterinaria-api
-      ./mvnw spring-boot:run
+* Make sure to download Java 21 (available at: https://www.oracle.com/co/java/technologies/downloads/#java21) and Maven (mvn) 3.9.9 (available at https://maven.apache.org/download.cgi).
+* Remember to add both of them binaries as environment variables in order to work with them.
+  
+      cd ../YOURPATH/veterinaria-api
+      mvn spring install // Install dependencies  
+      mvn spring-boot:run // Execute at localhost:8080
 ### * Access Swagger UI:
       http://localhost:8080/swagger-ui.html
 
 ### Frontend:
-    cd veterinaria-frontend
-    npm install
-    npm start
+* Make sure to download Node.js 20.15.0 or newer alongside NPM 10.7.0 or newer (both availables at: https://nodejs.org/en/download) 
+* Remember to add NPM binaries as environment variables in order to work with this tool.
+      
+      cd ../YOURPATH/veterinaria-frontend
+      npm install
+      npm start
 * The app should be available at http://localhost:3000
+
+### Database
+* Make sure to download (Available at https://www.postgresql.org/download/)
+* It is suggested to install PostgreSQL alongside PgAdmin4 to create and manipulate the database since its free but any Database manager of your preference would work.
+
+* Create the local server and create the database inside making sure it points to localhost at port 5432.
+* Follow the next path and change the password you selected inside your server.
+
+      cd ../YOURPATH/veterinaria-api/main/resources/application.properties
+      alter spring.datasource.password=YOUR_PASSWORD_HERE
 
 ## 📂 Project Structure
 ### Backend:
@@ -68,6 +89,15 @@ This is a demonstration project — there is no user authentication or access co
     │   └── AnimalRepository, CaninoRepository, etc.
     ├── service/
     │   └── AnimalService, TransaccionService, StatisticsService
+
+### Frontend:
+    src/
+    ├── components/
+    │   └── TransactionForm.js, StatisticsPage.js, AnimalList.js...
+    ├── services/
+    │   └── vetApi.js
+    ├── App.js
+    ├── index.js
 
 ### Class Diagram
 ```mermaid
@@ -192,15 +222,6 @@ classDiagram
     Animal <|-- Anfibios
     Transaccion --> Animal : animal
 ```
-
-### Frontend:
-    src/
-    ├── components/
-    │   └── TransactionForm.js, StatisticsPage.js, AnimalList.js...
-    ├── services/
-    │   └── vetApi.js
-    ├── App.js
-    ├── index.js
 
 ## 📦 Excel Export
 You can export all transactions via a button in the transaction form page. The generated Excel file will include all adoption/foster events registered so far.
