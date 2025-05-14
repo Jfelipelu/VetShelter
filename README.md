@@ -68,7 +68,7 @@ This is a demonstration project — there is no user authentication or access co
 * The app should be available at http://localhost:3000
 
 ### Database
-* Make sure to download (Available at https://www.postgresql.org/download/)
+* Make sure to download PostgreSQL (Available at https://www.postgresql.org/download/)
 * It is suggested to install PostgreSQL alongside PgAdmin4 to create and manipulate the database since its free but any Database manager of your preference would work.
 
 * Create the local server and create the database inside making sure it points to localhost at port 5432.
